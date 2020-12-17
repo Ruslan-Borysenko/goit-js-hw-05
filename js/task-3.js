@@ -1,22 +1,44 @@
-const Storage = function (items) {
-  this.items = items;
-};
+// const Storage = function (items) {
+//   this.items = items;
+// };
 
-Storage.prototype.getItems = function () {
-  return this.items;
-};
+// Storage.prototype.getItems = function () {
+//   return this.items;
+// };
 
-Storage.prototype.addItem = function (item) {
-  this.items.push(item);
-};
+// Storage.prototype.addItem = function (item) {
+//   this.items.push(item);
+// };
 
-Storage.prototype.removeItem = function (item) {
-  for (let i = 0; i < this.items.length; i += 1) {
-    if (item === this.items[i]) {
-      this.items.splice(i, 1);
+// Storage.prototype.removeItem = function (item) {
+//   for (let i = 0; i < this.items.length; i += 1) {
+//     if (item === this.items[i]) {
+//       this.items.splice(i, 1);
+//     }
+//   }
+// };
+
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  removeItem(item) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      if (item === this.items[i]) {
+        this.items.splice(i, 1);
+      }
     }
   }
-};
+}
 
 const storage = new Storage([
   'Нанитоиды',

@@ -1,14 +1,30 @@
-const User = function (name, age, followers) {
-  this.name = name;
-  this.age = age;
-  this.followers = followers;
-};
+// const User = function (name, age, followers) {
+//   this.name = name;
+//   this.age = age;
+//   this.followers = followers;
+// };
 
-User.prototype.getInfo = function () {
-  console.log(
-    `User ${this.name} is ${this.age} years old and has ${this.followers} followers`,
-  );
-};
+// User.prototype.getInfo = function () {
+//   console.log(
+//     `User ${this.name} is ${this.age} years old and has ${this.followers} followers`,
+//   );
+// };
+
+class User {
+  // Аналог функции-конструктора
+  constructor(name, age, followers) {
+    this.name = name;
+    this.age = age;
+    this.followers = followers;
+  }
+
+  // Аналог Guest.prototype.getInfo
+  getInfo() {
+    console.log(
+      `User ${this.name} is ${this.age} years old and has ${this.followers} followers`,
+    );
+  }
+}
 
 const mango = new User('Mango', 2, 20);
 
